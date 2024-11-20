@@ -9,24 +9,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
 </head>
 
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#actividades">Actividades</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#Emisoras">Emisoras</a></li>
-        <li><a href="#transmision-en-vivo">Live</a></li>
-      </ul>
-    </nav>
+<header>
+  <nav>
+    <!-- Menú hamburguesa -->
+    <span class="hamburger">☰</span>
 
-    <div id="titulos">
-      <h2>Bienvenidos</h2>
-      <h1>Iglesia Emmanuel</h1>
-      <h2>Monte de los Olivos</h2>
-    </div>
-  </header>
+    <!-- Lista de navegación -->
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#actividades">Actividades</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#Emisoras">Emisoras</a></li>
+      <li><a href="#transmision-en-vivo">Live</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<div id="titulos">
+  <h2>Bienvenidos</h2>
+  <h1>Iglesia Emmanuel</h1>
+  <h2>Monte de los Olivos</h2>
+</div>
 
 
   <section id="actividades">
@@ -36,21 +40,16 @@
       <img src="Fotos/General/Convencion 2024.jpg" alt="Convención 1" onclick="expandImage(this)">
       <img src="Fotos/General/Iglesia1.jpg" alt="Iglesia 1" onclick="expandImage(this)">
       <img src="Fotos/Fondos/UPC.jpg" alt="Iglesia 2" onclick="expandImage(this)">
-
     </div>
   </section>
-  
-  <!-- Lightbox para ampliar imágenes -->
+
   <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
       <span class="close" onclick="closeLightbox()">×</span>
       <img id="lightbox-img" src="" alt="Imagen expandida">
     </div>
   </div>
-  
-  
 
-  <!-- Sección de Videos -->
   <section id="videos">
     <h2>Videos</h2>
     <div class="video-gallery">
@@ -60,7 +59,6 @@
     </div>
   </section>
 
-  <!-- Sección de Transmisión en Vivo -->
   <section id="transmision-en-vivo">
     <h2>Transmisión en Vivo</h2>
     <div class="live-stream">
@@ -68,7 +66,6 @@
     </div>
   </section>
 
-  <!-- Sección de Emisoras -->
   <section id="Emisoras">
     <h2>Emisoras de Fundación Emmanuel</h2>
     <p>Puedes escuchar las distintas emisoras a través de los siguientes medios:</p>
@@ -82,15 +79,12 @@
     </div>
   </section>
 
-<!-- Logo Final -->
-<section id="LogoFin">
-  <div id="galeria1">
-    <img src="Fotos/Fondos/Logo1.jpg" alt="Logo Iglesia">
-  </div>
-</section>
+  <section id="LogoFin">
+    <div id="galeria1">
+      <img src="Fotos/Fondos/Logo1.jpg" alt="Logo Iglesia">
+    </div>
+  </section>
 
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Iglesia Monte de los Olivos</p>
     <div class="footer-social-icons">
@@ -103,7 +97,6 @@
       <a href="https://www.instagram.com/upc_20/" target="_blank">
         <img src="Fotos/Iconos/Icono INSTA.png" alt="Instagram">
       </a>
-      
     </div>
   </footer>
 
