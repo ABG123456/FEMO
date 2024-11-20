@@ -1,0 +1,386 @@
+/* Estilos para el cuerpo de la página __________________________________________________________________________ */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Color de fondo de la página */
+  
+}
+
+/* Estilos para la barra de navegación __________________________________________________________________________ */
+nav {
+  position: fixed; /* Barra de navegación fija */
+  top: 0;
+  width: 97.5%; /* Ancho completo */
+  background-color: #201f1f9f; /* Fondo negro translúcido */
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  z-index: 10; /* Asegurar que esté siempre al frente */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff; /* Color de los enlaces */
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para los títulos __________________________________________________________________________*/
+#titulos {
+  padding: 100px 50px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto al centro */
+  
+}
+
+#titulos h1 {
+  font-size: 130px; /* Tamaño de letra para el h1 */
+  color: #fff; /* Color del texto */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para hacerlo llamativo */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Tipo de letra */
+  line-height: 0.1; /* Espaciado entre líneas */
+  text-shadow: 2px 2px 0 #000; /* Contorno negro */
+}
+
+#titulos h2 {
+  font-size: 70px; /* Tamaño de letra para el h2 */
+  color: #fff; /* Color del texto */
+  font-family: Arial, Helvetica, sans-serif; /* Tipo de letra */
+  line-height: 2.0; /* Espaciado entre líneas */
+  text-shadow: 2px 2px 0 #000; /* Contorno negro */
+}
+
+
+/* Estilos para la imagen de fondo __________________________________________________________________________*/
+#titulos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url('Fotos/Fondos/Fondo2.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
+  background-position: center; /* Posicionar la imagen en el centro */
+  height: 575px; /* Altura del contenedor */
+  width: 93.3%; /* Ancho del contenedor */
+  justify-content: center; /* Centrar horizontalmente el contenido */
+  align-items: center; /* Centrar verticalmente el contenido */
+}
+
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Estilos para las opciones de navegación __________________________________________________________________________*/
+header nav ul li a {
+  color: #fff; /* Color de los enlaces del menú */
+  text-decoration: none;
+  font-size: 18px; /* Tamaño de letra más grande para mejorar la lectura */
+}
+
+/* Estilos para la sección de actividades  __________________________________________________________________________*/
+
+#actividades {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e0e7ff, #d1d5db);
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+/* Estilo para el título de la sección */
+#actividades h2 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Galería de imágenes */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 imágenes por fila en pantallas grandes */
+  gap: 20px; /* Separación entre las imágenes */
+  justify-content: center; /* Centra las imágenes dentro del contenedor */
+  padding: 20px;
+}
+
+/* Imágenes */
+.gallery img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 300px; /* Tamaño máximo para mantener la proporción */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.4s, opacity 0.4s, box-shadow 0.4s;
+}
+
+/* Efecto al pasar el mouse por encima */
+.gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenido del Lightbox */
+.lightbox-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 75%; /* Limita al 75% del ancho */
+  max-height: 75%; /* Limita al 75% del alto */
+}
+
+.lightbox-content img {
+  width: 75%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* Estilos para la sección de videos __________________________________________________________________________*/
+
+#videos {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1); /* Fondo degradado suave */
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+/* Estilo para el título de la sección */
+#videos h2 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Estilos para la galería de videos */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Distribuye en columnas ajustables */
+  gap: 20px; /* Espacio entre elementos */
+  padding: 10px;
+  justify-items: center; /* Centra los videos en cada columna */
+}
+
+/* Estilos para los iframes de los videos */
+.video-gallery iframe {
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 560px; /* Ancho máximo para los videos */
+  height: 315px; /* Altura para los videos */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: transform 0.4s, opacity 0.4s, box-shadow 0.4s;
+}
+
+.video-gallery iframe:hover {
+  transform: scale(1.05); /* Aumento sutil en hover */
+  opacity: 0.9; /* Ligera transparencia en hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}
+
+
+/* Estilos para la sección de transmisión en vivo  __________________________________________________________________________*/
+#transmision-en-vivo {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f7fafc, #e2e8f0); /* Fondo degradado suave */
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+/* Estilo para el título de la sección */
+#transmision-en-vivo h2 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Estilos para el contenedor del video en vivo */
+.live-stream {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilos para el iframe del video */
+.live-stream iframe {
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 800px; /* Ancho máximo para el video */
+  height: 450px; /* Altura del video */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: transform 0.4s, opacity 0.4s, box-shadow 0.4s;
+}
+
+.live-stream iframe:hover {
+  transform: scale(1.05); /* Aumento sutil en hover */
+  opacity: 0.9; /* Ligera transparencia en hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}
+
+
+
+
+
+
+/* Ajusta el contenedor de la imagen __________________________________________________________________________*/
+#LogoFin {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex; /* Habilitar flexbox */
+  justify-content: center; /* Centrar los logos horizontalmente */
+  align-items: center; /* Alinear verticalmente */
+}
+
+/* Ajusta la imagen y agrega la animación de rotación */
+#LogoFin #galeria1 img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); } /* Aumenta levemente el tamaño */
+}
+
+
+/* Estilos para la sección Emisoras __________________________________________________________________________ */
+#Emisoras {
+  text-align: center; /* Centra el texto y el contenido */
+  padding: 40px 20px; /* Espaciado interno para dar más aire a la sección */
+  background-color: #f4f4f400; /* Fondo suave para destacar la sección */
+}
+
+/* Estilo para el título de la sección */
+#Emisoras h2 {
+  font-size: 2.5em; /* Tamaño grande para el título */
+  color: #333; /* Color de texto oscuro */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para hacerlo llamativo */
+  margin-bottom: 10px;
+}
+
+/* Estilo para el párrafo */
+#Emisoras p {
+  font-size: 1.2em; /* Tamaño ligeramente mayor para mejorar la legibilidad */
+  color: #555; /* Color de texto gris para contraste */
+  margin-bottom: 30px;
+}
+
+/* Estilos para los iconos de las emisoras */
+.Emisoras {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.Emisoras a img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.Emisoras a img:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* Estilos para el pie de página ______________________________________________________________________________________________________ */
+footer {
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para hacerlo llamativo */
+  text-align: center;
+  padding: 20px;
+  font-size: 1.8em; /* Tamaño de fuente más grande */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer p {
+  margin: 0;
+}
+
+  /* Estilos para la sección de redes sociales en el pie de página __________________________________________________________________________ */
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre los iconos */
+    margin-top: 10px;
+  }
+  
+  .footer-social-icons a img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: 40px;
+    transition: transform 0.3s, opacity 0.3s; /* Efecto de transición para hover */
+  }
+  
+  .footer-social-icons a img:hover {
+    transform: scale(1.2); /* Efecto de aumento en hover */
+    opacity: 0.8; /* Efecto de transparencia en hover */
+  }
+  

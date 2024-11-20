@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iglesia Monte de los Olivos</title>
+  <link rel="stylesheet" href="css_index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#Emisoras">Emisoras</a></li>
+        <li><a href="#transmision-en-vivo">Live</a></li>
+      </ul>
+    </nav>
+
+    <div id="titulos">
+      <h2>Bienvenidos</h2>
+      <h1>Iglesia Emmanuel</h1>
+      <h2>Monte de los Olivos</h2>
+    </div>
+  </header>
+
+
+  <section id="actividades">
+    <h2>Cartelera</h2>
+    <div class="gallery">
+      <img src="Fotos/General/Capa1.jpg" alt="Capacitación" onclick="expandImage(this)">
+      <img src="Fotos/General/Convencion 2024.jpg" alt="Convención 1" onclick="expandImage(this)">
+      <img src="Fotos/General/Iglesia1.jpg" alt="Iglesia 1" onclick="expandImage(this)">
+      <img src="Fotos/Fondos/UPC.jpg" alt="Iglesia 2" onclick="expandImage(this)">
+
+    </div>
+  </section>
+  
+  <!-- Lightbox para ampliar imágenes -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="close" onclick="closeLightbox()">×</span>
+      <img id="lightbox-img" src="" alt="Imagen expandida">
+    </div>
+  </div>
+  
+  
+
+  <!-- Sección de Videos -->
+  <section id="videos">
+    <h2>Videos</h2>
+    <div class="video-gallery">
+      <iframe src="https://www.youtube.com/embed/v9Q-2Q4isoM" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/oDCa76Rtx6k" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/DqP15QWU-eE" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Sección de Transmisión en Vivo -->
+  <section id="transmision-en-vivo">
+    <h2>Transmisión en Vivo</h2>
+    <div class="live-stream">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Sección de Emisoras -->
+  <section id="Emisoras">
+    <h2>Emisoras de Fundación Emmanuel</h2>
+    <p>Puedes escuchar las distintas emisoras a través de los siguientes medios:</p>
+    <div class="Emisoras">
+      <a href="https://felicidadstereo.com" target="_blank">
+        <img src="Fotos/Emisoras/Radio1.png" alt="Emisora Felicidad Stereo">
+      </a>
+      <a href="https://radioalegria975fm.com" target="_blank">
+        <img src="Fotos/Emisoras/Radio3.png" alt="Emisora Alegría FM">
+      </a>
+    </div>
+  </section>
+
+<!-- Logo Final -->
+<section id="LogoFin">
+  <div id="galeria1">
+    <img src="Fotos/Fondos/Logo1.jpg" alt="Logo Iglesia">
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Iglesia Monte de los Olivos</p>
+    <div class="footer-social-icons">
+      <a href="https://www.facebook.com/iglesiaemanuel.montedelosolivos" target="_blank">
+        <img src="Fotos/Iconos/Icono FB.png" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/@fundacionemmanuelfeenaccio8672" target="_blank">
+        <img src="Fotos/Iconos/Icono YOUT.png" alt="YouTube">
+      </a>
+      <a href="https://www.instagram.com/upc_20/" target="_blank">
+        <img src="Fotos/Iconos/Icono INSTA.png" alt="Instagram">
+      </a>
+      
+    </div>
+  </footer>
+
+  <script src="js_index.js"></script>
+</body>
+
+</html>
