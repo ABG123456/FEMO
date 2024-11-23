@@ -1,3 +1,12 @@
+// Integración del SDK de Facebook
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v21.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 // Función para expandir imágenes (Lightbox)
 function expandImage(img) {
   const lightbox = document.getElementById('lightbox');

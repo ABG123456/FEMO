@@ -160,7 +160,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Sección de videos */
+/* Sección de videos -----------------------------------------------------------------*/
 #videos {
   text-align: center;
   padding: 50px 20px;
@@ -178,18 +178,31 @@ nav ul li a:hover {
 
 .video-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta columnas automáticamente */
+  gap: 20px; /* Espacio entre videos */
+  justify-content: center;
 }
 
 .video-gallery iframe {
   width: 100%;
-  max-width: 560px;
-  height: 315px;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Mantén la proporción de los videos */
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
 }
 
-/* Sección de transmisión en vivo */
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  #videos h2 {
+    font-size: 2em; /* Tamaño de texto más pequeño */
+  }
+
+  .video-gallery {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+}
+
+/* Sección de transmisión en vivo ---------------------------------------------------------------------*/
 #transmision-en-vivo {
   text-align: center;
   padding: 50px 20px;
@@ -197,6 +210,13 @@ nav ul li a:hover {
   border-radius: 15px;
   margin: 20px auto;
   max-width: 90%;
+}
+
+#transmision-en-vivo p {
+  font-size: 1.2em;
+  color: #555; /* Texto gris oscuro */
+  font-style: italic; /* Texto en cursiva */
+  margin-bottom: 20px; /* Espaciado debajo del texto */
 }
 
 #transmision-en-vivo iframe {
@@ -207,37 +227,55 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-/* Sección de emisoras */
 #Emisoras {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
+  background-color: #f8f9fa; /* Fondo claro */
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 90%;
 }
 
 #Emisoras h2 {
   font-size: 2.5em;
-  color: #333;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
 #Emisoras p {
   font-size: 1.2em;
-  color: #555;
+  color: #555; /* Texto gris oscuro */
+  font-style: italic; /* Texto en cursiva */
+  margin-bottom: 20px; /* Espaciado debajo del texto */
 }
 
-.Emisoras {
+
+.gallery {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
 }
 
-.Emisoras img {
+.gallery a {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.gallery img {
   width: 150px;
-  transition: transform 0.3s;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Emisoras img:hover {
-  transform: scale(1.2);
+.gallery a:hover img {
+  transform: scale(1.1); /* Efecto de zoom */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
 }
+
 
 /* Pie de página */
 footer {
